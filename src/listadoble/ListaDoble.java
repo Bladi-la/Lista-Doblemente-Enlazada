@@ -38,13 +38,13 @@ public class ListaDoble {
         ld.listarDesdeElFinal();
 
         System.out.println("\n\nBuscando objetos");
-        ListaDoblementeEnlazada lde = ld.buscarNodo("Vive en Meanguera");
+        ListaDoblementeEnlazada lde = ld.buscarNodo("Tengo un deseo de ser programador fullstack en Java");
         System.out.println("Buscar a: " + lde.getDato());
 
         //insertar entre dos nodos de la lista
         ld.insertEntreDosNodos("Nodo nuevo", lde);
-        lde = ld.buscarNodo("El nombre de mi mama es Luisa");
-        ld.insertEntreDosNodos("-------Datos de mi mama--------" , lde);
+        lde = ld.buscarNodo("Mi nombre es Bladimir");
+        ld.insertEntreDosNodos("-------Datos adicionales--------" , lde);
         
         System.out.println("\nValor de nodo raiz siguiente "+ld.getRaiz().getNext());
         System.out.println("\nValor de nodo cabeza siguiente "+ld.getCabeza().getNext());
