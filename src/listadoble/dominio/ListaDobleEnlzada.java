@@ -36,7 +36,10 @@ public class ListaDobleEnlzada {
     public boolean isEmty() {
         return (raiz == null);
     }
-
+/**
+ * 
+ * @param dato de tipo Object para mayor felxibilidad, sera insertado al inicio de la lista
+ */
     public void insertToBeginning(Object dato) {
 
         ListaDoblementeEnlazada nodoNuevo = new ListaDoblementeEnlazada(dato);
@@ -63,6 +66,10 @@ public class ListaDobleEnlzada {
         cabeza.setNext(raiz);
         raiz.setBack(cabeza);
     }
+    /**
+     * 
+     * @param dato es de tipo Object, para mayor flexibilidad, el objeto sera insertado al final de la lista
+     */
 
     public void insertToTheEnd(Object dato) {
 
@@ -88,7 +95,9 @@ public class ListaDobleEnlzada {
         cabeza.setNext(raiz);
         raiz.setBack(cabeza);
     }
-
+/**
+ * este metodo se encarga de listar los datos de la lista desde el inicio
+ */
     public void listarDesdeElInicio() {
 
         if (!isEmty()) {
@@ -103,7 +112,9 @@ public class ListaDobleEnlzada {
             System.out.println("Lista vacia");
         }
     }
-
+/**
+ * Este metodo lista los datos de la lista desde el final al inicio
+ */
     public void listarDesdeElFinal() {
 
         if (!isEmty()) {
@@ -119,11 +130,17 @@ public class ListaDobleEnlzada {
             System.out.println("Lista vacia");
         }
     }
-
+/**
+ * borra toda la lista
+ */
     public void delte() {
         this.cabeza = this.raiz = null;
     }
-
+/**
+ * 
+ * @param dato el nuevo objeto a agregar
+ * @param nodo el nodo anterior al nuevo nodo a crear 
+ */
     public void insertEntreDosNodos(Object dato, ListaDoblementeEnlazada nodo) {
 
         if (nodo != null) {
